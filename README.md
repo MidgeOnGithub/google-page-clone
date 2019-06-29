@@ -1,0 +1,2 @@
+## The Odin on Rails HTMl/CSS Project
+This project is meant to demonstrate basic and intermediate knowledge of the HTML and CSS languages. The objective is to make a simple look-alike clone of Google's homepage.
