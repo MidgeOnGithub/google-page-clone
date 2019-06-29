@@ -1,2 +1,2 @@
-## The Odin on Rails HTMl/CSS Project
+## The Odin on Rails HTML/CSS [Project](http://www.theodinproject.com/courses/web-development-101/lessons/html-css)
 This project is meant to demonstrate basic and intermediate knowledge of the HTML and CSS languages. The objective is to make a simple look-alike clone of Google's homepage.
