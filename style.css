@@ -1,6 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     font-size: 13px;
+    height: 100%;
 }
 
 a {
@@ -19,11 +20,13 @@ a:hover {
     justify-items: center;
     align-content: center;
     padding: 15px;
+    width: 100%;
 }
 
 /* Header section */
 .header {
-    height: 30px;
+    position: fixed;
+    top: 16px;
     grid-template-columns: repeat(2, 1fr) 20fr repeat(4, 1fr);
 }
 
@@ -50,17 +53,46 @@ a:hover {
 
 /* Center section */
 .main {
+    margin-top: 89px;
+    padding-bottom: 35px;
     display: block;
     text-align: center;
 }
 
 .logo {
-    width: 520px;
-    height: auto;
+    padding-top: 109px;
+    height: 92px;
+    width: 272px;
+}
+
+.search-bar {
+    padding-top: 5px;
+}
+
+.misc-buttons {
+    display: inline-block;
+}
+
+input[type="submit"] {
+    height: 36px;
+    margin: 11px 4px;
+    padding: 0 16px;
+    background-color: #f2f2f2;
+    border: 1px solid #f2f2f2;
+    border-radius: 4px;
+    color: #5F6368;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #f8f8f8;
+    border-color: #c6c6c6;
+    color: #222;
 }
 
 /* Footer section */
 .footer {
+    bottom: 0;
     height: 40px;
     display: grid;
     grid-template-columns: repeat(3, 1fr) 20fr repeat(3, 1fr);
