@@ -1,10 +1,15 @@
 body {
     font-family: Arial, sans-serif;
     font-size: 13px;
-    height: 100%;
+}
+
+content {
+    height: 100vh;
+    width: 100vh;
 }
 
 a {
+    display: inline-block;
     color: #000;
     opacity: 0.75;
     text-decoration: none;
@@ -15,53 +20,106 @@ a:hover {
     text-decoration: underline;
 }
 
-.header, .footer {
-    display: grid;
-    justify-items: center;
-    align-content: center;
-    padding: 15px;
-}
-
 /* Header section */
-.header {
+.top-nav, .bottom-nav {
+    vertical-align: middle;
+    width: 100%;
+}
+
+.left, .right {
+    display: inline-flex;
+    align-items: center;
+}
+
+.right {
+    float: right;
+}
+
+.top-nav .left, .top-nav .right,
+.bottom-nav .left, .bottom-nav .right {
+    height: 100%;
+}
+
+.top-nav .right,
+.bottom-nav .right {
+    padding: 0 30px;
+}
+
+.top-nav {
+    height: 30px;
+    top: 20px;
+    display: block;
     position: fixed;
-    top: 16px;
-    grid-template-columns: repeat(2, 1fr) 20fr repeat(4, 1fr);
 }
 
-.gmail {
-    /* Given the above column template and that classes "about" and "store"
-    implicitly becoming columns 1 and 2, make column 3 an empty space by
-    skipping column 3 with the next element! */
-    grid-column-start: 4;
+.top-nav .left {
+    height: 100%;
+    margin-left: 12px;
 }
 
-.login {
-    padding: 12px;
+.top-nav .left a,
+.top-nav .right a {
+    padding-left: 15px;
+}
+
+.top-nav .right img {
+    height: 18px;
+    width: 18px;
+    opacity: 0.85;
+}
+
+.top-nav .right img:hover {
+    opacity: 1;
+}
+
+.top-nav .right .login {
+    height: 100%;
+    margin-left: 15px; 
+    display: inline-flex;
+    align-items: center;
     border: 1px solid #4285f4;
     border-radius: 2px;
     font-weight: bold;
     background-color: #4285f4;
-    background-clip: border-box;
 }
 
-.login a {
+.top-nav .right .login a {
+    padding: 0 12px;
     color: #fff;
     opacity: 1.0;
 }
 
+/* Footer section */
+.bottom-nav {
+    box-sizing: border-box;
+    height: 40px;
+    position: absolute;
+    display: block;
+    bottom: 0;
+    background-color: #f2f2f2;
+    border: solid 1px #e4e4e4;
+}
+
+.bottom-nav .left a,
+.bottom-nav .right a {
+    padding-left: 27px;
+}
+
 /* Center section */
 .main {
-    margin-top: 89px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-items: center;
     display: block;
     text-align: center;
 }
 
 .logo {
-    padding-bottom: 32px;
-    padding-top: 109px;
     height: 92px;
     width: 272px;
+    padding-bottom: 32px;
+    padding-top: 109px;
 }
 
 .search-bar {
@@ -83,7 +141,6 @@ a:hover {
 .misc-buttons {
     margin-top: 20px;
     display: inline-block;
-    word-spacing: 0px;  
 }
 
 input[type="submit"] {
@@ -105,7 +162,7 @@ input[type="submit"]:hover {
 }
 
 .changing-link {
-    margin: 14px 0;
+    padding: 14px 0;
 }
 
 .changing-link a {
@@ -115,21 +172,4 @@ input[type="submit"]:hover {
 
 .changing-link a:hover {
     opacity: 1;
-}
-
-/* Footer section */
-.footer {
-    bottom: 0;
-    height: 40px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr) 20fr repeat(3, 1fr);
-    background-color: #f2f2f2;
-    border: solid 1px #e4e4e4;
-}
-
-.privacy {
-    /* Given the above column template and that classes "advertising",
-    "business" and "explain" implicitly becoming columns 1, 2, and 3, make
-    column 4 an empty space by skipping column 4 with the next element! */
-    grid-column-start: 5;
 }
