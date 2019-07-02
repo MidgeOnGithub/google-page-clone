@@ -20,7 +20,6 @@ a:hover {
     justify-items: center;
     align-content: center;
     padding: 15px;
-    width: 100%;
 }
 
 /* Header section */
@@ -54,26 +53,41 @@ a:hover {
 /* Center section */
 .main {
     margin-top: 89px;
-    padding-bottom: 35px;
     display: block;
     text-align: center;
 }
 
 .logo {
+    padding-bottom: 32px;
     padding-top: 109px;
     height: 92px;
     width: 272px;
 }
 
 .search-bar {
-    padding-top: 5px;
+    display: block;
+}
+
+.search-bar input {
+    font-size: 1px;
+    height: 42px;
+    width: 550px;
+    border: 1px solid #dfe1e5;
+    border-radius: 24px;
+}
+
+.search-bar input:hover {
+    box-shadow: 0 1px 6px 0 #202124;
 }
 
 .misc-buttons {
+    margin-top: 20px;
     display: inline-block;
+    word-spacing: 0px;  
 }
 
 input[type="submit"] {
+    font-size: 14px;
     height: 36px;
     margin: 11px 4px;
     padding: 0 16px;
@@ -88,6 +102,19 @@ input[type="submit"]:hover {
     background-color: #f8f8f8;
     border-color: #c6c6c6;
     color: #222;
+}
+
+.changing-link {
+    margin: 14px 0;
+}
+
+.changing-link a {
+    color: #1a0dab;
+    opacity: 1;
+}
+
+.changing-link a:hover {
+    opacity: 1;
 }
 
 /* Footer section */
